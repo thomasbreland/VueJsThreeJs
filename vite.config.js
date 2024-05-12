@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+
 import { createHtmlPlugin } from 'vite-plugin-html';
 
 // allow base URL to be set by environment, e.g., during pipeline, for deploying to GitHub Pages subdirectory
@@ -14,12 +15,23 @@ export default defineConfig({
   plugins: [
     vue(),
     createHtmlPlugin({
-      inject: {
-        data: {
-          BASE_URL: BASE_URL
+      pages: [
+        {
+          entry: 'src/main.js',
+          filename: 'index.html',
+          template: 'index.html',
+        },
+        {
+          entry: '404.html',
+          filename: '404.html',
+          template: 'public/404.html',
+          injectOptions: {
+            data: {
+              BASE_URL: BASE_URL
+            }
+          }
         }
-      },
-      template: 'public/404.html'
+      ],
     })
   ],
   resolve: {
