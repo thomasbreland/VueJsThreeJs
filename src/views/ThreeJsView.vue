@@ -43,9 +43,9 @@
       this.renderer.domElement.removeEventListener('mousedown', this.onMouseDown);
       this.renderer.domElement.removeEventListener('mouseup', this.onMouseUp);
       this.renderer.domElement.removeEventListener('mousemove', this.onMouseMove);
-      this.renderer.domElement.removeEventListener('touchstart', this.onTouchStart);
+      this.renderer.domElement.removeEventListener('touchstart', this.onTouchStart, { passive: false });
       this.renderer.domElement.removeEventListener('touchend', this.onTouchEnd);
-      this.renderer.domElement.removeEventListener('touchmove', this.onTouchMove);
+      this.renderer.domElement.removeEventListener('touchmove', this.onTouchMove, { passive: false });
       window.removeEventListener('resize', this.handleWindowResize);
     },
     methods: {
