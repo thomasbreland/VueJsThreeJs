@@ -16,7 +16,7 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          BASE_URL: encodeURIComponent(BASE_URL)
+          BASE_URL: BASE_URL
         }
       },
       template: 'public/404.html'
