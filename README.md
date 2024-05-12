@@ -1,5 +1,7 @@
 # VueJsThreeJs
 
+Hosted on GitHub Pages: https://thomasbreland.github.io/VueJsThreeJs/
+
 I added a three.js renderer with the Utah Teapot to the standard Vue.js in Vite template `npm create vue@latest`. Click and drag to rotate the teapot. This was just a quick demo for showing how to use three.js within other web application frameworks, and a chance to use GitHub Actions and GitHub Pages a little more.
 
 ## Recommended IDE Setup
@@ -27,6 +29,8 @@ npm run dev
 ```sh
 npm run build
 ```
+
+Checks `GH_PAGES_BASE_URL` environment variable to set base URL.
 
 ### Lint with [ESLint](https://eslint.org/)
 
