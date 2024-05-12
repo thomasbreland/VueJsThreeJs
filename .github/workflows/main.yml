@@ -33,6 +33,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Set environment variables
+        run: |
+          echo "GH_PAGES_BASE_URL=/VueJsThreeJs/" >> $GITHUB_ENV
+          echo "NODE_ENV=production" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
