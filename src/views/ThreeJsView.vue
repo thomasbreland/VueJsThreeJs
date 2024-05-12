@@ -137,6 +137,7 @@
         };
       },
       onTouchStart(event) {
+        event.preventDefault();
         if (event.touches.length === 1) {
           this.isDragging = true;
           this.previousMousePosition = {
@@ -149,6 +150,7 @@
         this.isDragging = false;
       },
       onTouchMove(event) {
+        event.preventDefault();
         if (!this.isDragging || event.touches.length !== 1) return;
 
         const deltaMove = {
