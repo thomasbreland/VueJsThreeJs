@@ -30,7 +30,7 @@ npm run dev
 npm run build
 ```
 
-Checks `GH_PAGES_BASE_URL` environment variable to set base URL.
+If `NODE_ENV` environment variable is set to production, checks `GH_PAGES_BASE_URL` environment variable to set base URL.
 
 ### Lint with [ESLint](https://eslint.org/)
 
