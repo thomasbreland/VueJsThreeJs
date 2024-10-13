@@ -180,14 +180,9 @@
   pointer-events: none;
 }
 .threejs {
-  background-color: transparent;
-  height: 50vh;
+  flex-grow: 1;
   display: flex;
   align-items: center;
-}
-@media (min-width: 1024px) {
-  .threejs {
-    min-height: 100vh;
-  }
+  background-color: transparent;
 }
 </style>
